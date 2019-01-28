@@ -11,7 +11,7 @@ import os
 TOKEN = 'NTM4MjcxNjcyNzQ3Mjk0NzIy.DyyOVA.ter8MjUmyo-sTn2JWEBtvvgZdew'
 
 client = commands.Bot(command_prefix = "e!")
-os.chdir(r'app')
+#os.chdir(r'app')
 
 helpembed = discord.Embed(
 	title = "**DisConomy** Bot Commands",
