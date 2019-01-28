@@ -11,7 +11,7 @@ import os
 TOKEN = 'NTM4MjcxNjcyNzQ3Mjk0NzIy.DyyOVA.ter8MjUmyo-sTn2JWEBtvvgZdew'
 
 client = commands.Bot(command_prefix = "e!")
-#os.chdir(r'app')
+os.chdir(r'C:\Users\PC\OneDrive\DisConomyBOT')
 
 helpembed = discord.Embed(
 	title = "**DisConomy** Bot Commands",
@@ -213,11 +213,11 @@ async def buy(ctx, item):
 				
 					i = 0
 					hadalready = False
-					while i < len(useritms[ctx.message.author.id]['items']):
+					for it in useritms[ctx.message.author.id]['items']:
 						if len(useritms[ctx.message.author.id]['items']) > 0:
-							if useritms[ctx.message.author.id]['items'][str(i)]['name'] == items[item]['name']:
+							if useritms[ctx.message.author.id]['items'][it]['name'] == items[item]['name']:
 								print('debug')
-								useritms[ctx.message.author.id]['items'][str(i)]['count'] += 1
+								useritms[ctx.message.author.id]['items'][it]['count'] += 1
 								items[item]['count'] -= 1
 								hadalready = True
 								await client.say(ctx.message.author.mention+", You Successfully purchased 1 :"+items[item]['name']+": **"+items[item]['name']+"**!")
